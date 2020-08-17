@@ -1,0 +1,46 @@
+--CREATE DATABASE TripPlanner; 
+
+--USE TripPlanner; 
+--CREATE TABLE Traveler(
+--Id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+--Address NVARCHAR(40) NOT NULL,
+--PhoneNumber NCHAR(10) NOT NULL, 
+--DOB DATE NOT NULL,
+--);
+
+--CREATE TABLE Passport(
+--Id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+--PassportNumber INT NOT NULL, 
+--PassportAddress NVARCHAR(40) NOT NULL,
+--PassportExpiration DATE NOT NULL,
+--);
+
+--ALTER TABLE Passport ADD fk INT NOT NULL 
+--ALTER TABLE Passport ADD FOREIGN KEY (fk) REFERENCES Traveler.Id;
+
+--CREATE TABLE Trip(
+--Id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+--StartDestination NVARCHAR(50) NOT NULL,
+--EndDestination NVARCHAR(50) NOT NULL,
+--Budget FLOAT NOT NULL,
+--TravelMode NVARCHAR(20) NOT NULL,
+--StartDate DATE NOT NULL,
+--EndDate DATE NOT NULL,
+--);
+
+--ALTER TABLE Trip ADD ff INT NOT NULL 
+--ALTER TABLE Trip ADD FOREIGN KEY (ff) REFERENCES Traveler(Id);
+
+--CREATE TABLE Hotel(
+--Id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+--HotelAddress NVARCHAR(50) NOT NULL,
+--HotelPhoneNumber NCHAR(10) NOT NULL,
+--);
+
+--CREATE TABLE TripHotel(
+--jk INT NOT NULL, 
+--hk INT NOT NULL,
+--);
+
+--ALTER TABLE TripHotel ADD FOREIGN KEY (jk) REFERENCES Traveler(Id)
+--ALTER TABLE TripHotel ADD FOREIGN KEY (hk) REFERENCES Hotel(Id)
